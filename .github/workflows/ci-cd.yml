@@ -63,8 +63,8 @@ jobs:
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: "AKIAUYM2ENIZ4GEQPBGQ"
+          aws-secret-access-key: "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"
           aws-region: us-east-1
       
       # Deploy push to AWS S3
