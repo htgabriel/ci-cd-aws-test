@@ -3,7 +3,7 @@ module.exports = {
 		{
 			name: 'aws-codedeploy',
 			script: 'npx',
-			args: 'npm start',
+			args: 'node index.js',
 			interpreter: 'none',
 			env: {
 				NODE_ENV: 'development',
