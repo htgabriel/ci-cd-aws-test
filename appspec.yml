@@ -2,9 +2,9 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/apps/aws-codedeploy
+    destination: /home/ubuntu/aws-codedeploy
 permissions:
-  - object: /home/apps
+  - object: /home/ubuntu
     owner: ubuntu
     group: ubuntu
     type:

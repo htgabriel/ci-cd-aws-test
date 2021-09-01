@@ -1,3 +1,3 @@
 #!/bin/bash
-cd /home/apps/aws-codedeploy
+cd ~/aws-codedeploy
 pm2 startOrReload ecosystem.config.js
