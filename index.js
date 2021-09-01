@@ -12,6 +12,10 @@ app.use((req, res, next) => {
 	((req.headers['x-forwarded-proto'] || '').endsWith('http')) ? res.redirect(`https://${req.hostname}${req.url}`) : next()
 })
 
+app.get('/teste', (req, res) => {
+	res.status(200).json({message: 'TESTE DE ROTA'});
+})
+
 app.get('/', (req, res) => {
 	res.status(200).json({message: 'Teste..'});
 })
