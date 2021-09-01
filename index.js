@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-	res.status(200).json({message: 'TESTE'});
+	res.status(200).json({message: 'Teste'});
 })
 
 app.listen(3000, async () => {
