@@ -17,7 +17,7 @@ app.get('/teste', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-	res.status(200).json({message: 'Teste..'});
+	res.status(200).json({message: 'Teste...'});
 })
 
 app.listen(3000, async () => {
