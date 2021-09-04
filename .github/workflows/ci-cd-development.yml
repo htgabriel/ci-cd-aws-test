@@ -40,7 +40,7 @@ jobs:
         node-version: ['12.x']
         appname: ['aws-codedeploy']
         deploy-group: ['development']
-        s3-bucket: ['htgabriel-aws-codedeploy-deployments']
+        s3-bucket: ['development-bucket-deployments']
         s3-filename: ['development-aws-codedeploy-${{ github.sha }}']
     
     needs: buildAndTest
