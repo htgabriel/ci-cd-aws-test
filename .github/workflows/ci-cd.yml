@@ -3,10 +3,10 @@ name: CI/CD
 on:
   push:
     branches:
-      - staging
+      - development
   pull_request:
     branches:
-      - staging
+      - development
 
 jobs:
   buildAndTest:
@@ -39,9 +39,9 @@ jobs:
         python-version: [3.8]
         node-version: ['12.x']
         appname: ['aws-codedeploy']
-        deploy-group: ['staging']
+        deploy-group: ['development']
         s3-bucket: ['htgabriel-aws-codedeploy-deployments']
-        s3-filename: ['staging-aws-codedeploy-${{ github.sha }}']
+        s3-filename: ['development-aws-codedeploy-${{ github.sha }}']
     
     needs: buildAndTest
     steps:
