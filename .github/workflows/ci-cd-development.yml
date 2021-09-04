@@ -3,10 +3,10 @@ name: CI/CD
 on:
   push:
     branches:
-      - staging
+      - development
   pull_request:
     branches:
-      - staging
+      - development
 
 jobs:
   buildAndTest:
@@ -28,8 +28,8 @@ jobs:
       # Install project dependencies, test and build
       - name: Install dependencies
         run: npm install
-      - name: Run build
-        run: npm run build
+#      - name: Run build
+#        run: npm run build
   
   deploy:
     name: CD Pipeline
@@ -39,9 +39,9 @@ jobs:
         python-version: [3.8]
         node-version: ['12.x']
         appname: ['aws-codedeploy']
-        deploy-group: ['staging']
-        s3-bucket: ['htgabriel-aws-codedeploy-deployments']
-        s3-filename: ['staging-aws-codedeploy-${{ github.sha }}']
+        deploy-group: ['development']
+        s3-bucket: ['development-bucket-deployments']
+        s3-filename: ['development-aws-codedeploy-${{ github.sha }}']
     
     needs: buildAndTest
     steps:
@@ -56,8 +56,8 @@ jobs:
       # Install project dependencies and build
       - name: Install dependencies
         run: npm install
-      - name: Run build
-        run: npm run build
+#      - name: Run build
+#        run: npm run build
       
       # Configure AWS credentials
       - name: Configure AWS credentials
