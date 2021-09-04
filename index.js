@@ -1,9 +1,10 @@
 const express       = require('express')
 const bodyParser    = require('body-parser')
 const cors          = require('cors')
-const moment        = require('moment')
+// const moment        = require('moment')
 
 const app = express()
+const NODE_PORT = process.env.NODE_PORT | 3000
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -17,5 +18,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(3000, async () => {
-	console.log('Server running')
+	console.log(`Server running on port ${NODE_PORT}...`)
 })
