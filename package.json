@@ -1,5 +1,6 @@
 {
 	"name": "aws-codedeploy",
+	"version": "1.0.0",
 	"description": "Teste de CI/CD",
 	"scripts": {
 		"lint": "eslint .",

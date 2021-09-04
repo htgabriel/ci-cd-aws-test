@@ -12,6 +12,6 @@ permissions:
       - file
 hooks:
   ApplicationStart:
-    - location: reload-pm2.sh
+    - location: ../reload-pm2.sh
       timeout: 300
       runas: ubuntu
