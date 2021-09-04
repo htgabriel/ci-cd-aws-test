@@ -1,10 +1,7 @@
-name: CI/CD
+name: CI/CD - Development
 
 on:
   push:
-    branches:
-      - development
-  pull_request:
     branches:
       - development
 
